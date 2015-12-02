@@ -23,7 +23,7 @@
   }
   
   &__text {
-    line-height: 30px;
+    @include font($fs-5, 30px);
     text-align: center;
   }
   

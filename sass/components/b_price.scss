@@ -34,6 +34,8 @@
     background-color: $dot-color;
     border-radius: 50%;
     margin: 0 10px;
+    cursor: pointer;
+    transition: background-color $time-animation-2, box-shadow $time-animation-2;
          
     &:hover {
       background-color: $dot-color-hover;
@@ -53,6 +55,7 @@
   &__toggle[id="price-3"]:checked ~ &__controls &__control[for="price-3"] {
     background-color: transparent;
     box-shadow: 0 0 0 3px $dot-color-active;
+    cursor: default;
     &:hover,
     &:active {
       background-color: transparent;

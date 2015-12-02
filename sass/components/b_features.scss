@@ -17,6 +17,7 @@
     }
     
     &-description {
+      @include font($fs-5, $lh-base);
       width: 90%;
       text-align: center;
       margin-bottom: 35px;

@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  transition: background-color .20s, border-color .10s;
+  transition: background-color $time-animation-2, border-color $time-animation-2;
   
   &__inner {
     @include container();
@@ -14,7 +14,7 @@
   
   &__navbar {
     position: relative;
-    padding: 22px 0;
+    padding: 18px 0;
     background-color: $menu-color;
     border-bottom: 1px solid transparent;
     z-index: 90;
@@ -34,7 +34,7 @@
     
     &--drop-down {
       transform: translateY(0);
-      transition: transform .3s ease-out;
+      transition: transform .2s ease-out;
     }
   }
   

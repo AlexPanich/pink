@@ -14,7 +14,7 @@
     left: 20px;
     right: 20px;
     height: 4px;
-      transition: left 0.2s, right 0.2s, background-color 0.2s, transform 0.2s;
+    transition: left $time-animation-1, right $time-animation-1, background-color $time-animation-1, transform $time-animation-1;
     
     &::after,
     &::before {
@@ -24,7 +24,7 @@
       left: 0;
       right: 0;
       height: 4px;
-      transition: left 0.2s, right 0.2s, background-color 0.2s, transform 0.2s, top 0.2s;
+      transition: left 0.3s, right $time-animation-1, background-color $time-animation-1, transform $time-animation-1, top $time-animation-1;
     }
     
     &::after {

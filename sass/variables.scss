@@ -29,6 +29,9 @@ $heading-color: $blue-2;
 $table-border-color: $gray-2;
 $table-heading-color: $blue-2;
 
+$time-animation-1: 0.2s;
+$time-animation-2: 0.1s;
+
 //typography
 
 $font-open-sans: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -43,9 +46,9 @@ $fw-normal: 400;
 $fw-semibold: 600;
 $fw-bold: 700;
 
-$fs-1: ceil($fs-base * 2.286); //32
-$fs-2: ceil($fs-base * 1.714); //24
-$fs-3: ceil($fs-base * 1.5);   //21
-$fs-4: ceil($fs-base * 1.286); //18
+$fs-1: round($fs-base * 2.286); //32
+$fs-2: round($fs-base * 1.714); //24
+$fs-3: round($fs-base * 1.5);   //21
+$fs-4: round($fs-base * 1.286); //18
 $fs-5: $fs-base;               //14
-$fs-6: ceil($fs-base * 0.857); //12
+$fs-6: round($fs-base * 0.857); //12
