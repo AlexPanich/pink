@@ -1,0 +1,12 @@
+.logo {
+  
+  &__link {
+    @include font($fs-1, $lh-caption, $fw-normal, $white );
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  &__img {
+    display: none;
+  }
+}

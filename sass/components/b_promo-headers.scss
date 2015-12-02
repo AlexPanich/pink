@@ -1,0 +1,12 @@
+.promo-headers {
+  padding-top: 45px;
+  @include font($fs-2, $lh-caption, $fw-light, $heading-color);
+  text-align: center;
+  background-color: $white;
+  
+  & div {
+    @include container();
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}

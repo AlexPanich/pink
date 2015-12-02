@@ -1,0 +1,39 @@
+.hero {
+  background-color: transparent, $hero-bg-color;
+  background-image: url("../img/bg-hero-hand.png"), url("../img/bg-hero-back.jpg");
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 245px, center top;
+  background-size: auto, 100%;
+  height: 729px;
+  padding-top: 85px;
+  
+  &__inner {
+    position: relative;
+    @include container();
+    height: 100%;
+  }
+  
+  &__title {
+    color: $white; 
+    width: 90%;
+    text-align: center;
+    @include container();
+  }
+  
+  &__content {
+    position: absolute;
+    bottom: 0;
+    background-color: $hero-bg-color;
+    height: 272px;
+    width: 100%;
+    margin-left: -20px;
+    padding-top: 28px;
+  }
+  
+  &__content-text {
+    @include font($fs-5, $lh-base, $fw-light, $white);
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

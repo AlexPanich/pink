@@ -1,0 +1,21 @@
+.btn-dowload {
+  display: block;
+  margin: 0 auto;
+  @include font($fs-4, $fs-4, $fw-bold, $white);
+  border: 3px solid $white;
+  padding: 15px 0 16px;
+  border-radius: 28px;
+  width: 280px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+  
+  &:hover {
+    background-color: $white;
+    color: $link-color;
+  }
+  
+  &:active {
+    color: $link-color-active;
+  }
+}

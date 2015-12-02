@@ -1,0 +1,38 @@
+.main-nav {
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  &__link {
+    display: block;
+    @include font($fs-4, $fs-4, $fw-bold, inherit);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 22px 0;
+    text-align: center;
+    background-color: $menu-color-active;
+    border-top: 1px solid $blue-3;
+    border-bottom: 1px solid $black;
+    transition: color 0.2s;
+  }
+  
+  &__item {
+    color: $nav-link-color;
+    
+    &--current a{
+      color: $nav-link-color-current;
+    }
+    
+    &:hover {
+      color: $nav-link-color-hover;
+    }
+    
+    &:active {
+      color: $nav-link-color-active;
+    }
+  }
+  
+  
+}

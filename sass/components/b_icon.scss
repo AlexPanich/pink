@@ -1,0 +1,24 @@
+.icon {
+  position: absolute;
+  right: 50px;
+  
+  &--yes {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 29px;
+      height: 22px;
+      background-image: url('../img/icon-yes.png');
+    }
+  }
+  
+  &--no {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background-image: url('../img/icon-no.png');
+    }
+  }
+}

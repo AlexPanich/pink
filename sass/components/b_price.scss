@@ -1,0 +1,75 @@
+.price {
+  position: relative;
+  background-color: $gray-bg-color;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  
+  &::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    height: 35px;
+    width: 100%;
+    background: linear-gradient(to right bottom, $white 50%, $gray-bg-color 50%);
+  }
+  
+  &__toggle {
+    display: none;
+  }
+  
+  &__controls {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__control {
+    width: 6px;
+    height: 6px;
+    background-color: $dot-color;
+    border-radius: 50%;
+    margin: 0 10px;
+         
+    &:hover {
+      background-color: $dot-color-hover;
+    }
+    
+    &:active {
+      background-color: $dot-color-down;
+    }
+  }
+  
+  &__table-wrap {
+    overflow: hidden;
+  }
+  
+  &__toggle[id="price-1"]:checked ~ &__controls &__control[for="price-1"],
+  &__toggle[id="price-2"]:checked ~ &__controls &__control[for="price-2"],
+  &__toggle[id="price-3"]:checked ~ &__controls &__control[for="price-3"] {
+    background-color: transparent;
+    box-shadow: 0 0 0 3px $dot-color-active;
+    &:hover,
+    &:active {
+      background-color: transparent;
+    }
+  }
+  
+  
+  &__toggle[id="price-1"]:checked ~ &__table-wrap .price-table {
+    transform: translateX(20px);
+  }
+  
+  &__toggle[id="price-2"]:checked ~ &__table-wrap .price-table {
+    transform: translateX(-31%);
+  }
+  
+  &__toggle[id="price-3"]:checked ~ &__table-wrap .price-table {
+    transform: translateX(-64%);
+  }
+  
+}

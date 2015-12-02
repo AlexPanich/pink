@@ -3,56 +3,74 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-
-
-  <head class="page-header">
-    <div class="page-header__logo-wrap">
-      <a href="" class="page-header__logo-link"><img src="img/logo.svg" alt="Логотип PINK"></a>
+  <header class="page-header">
+    <div class="page-header__navbar">
+      <div class="page-header__inner">
+        <div class="logo">
+          <a href="" class="logo__link"><img class="logo__img" src="img/logo.svg" alt="Логотип PINK">Pink</a>
+        </div>
+        <button class="navbar-toggle" type="button">
+          <span class="navbar-toggle__lines"></span>
+        </button>
+      </div>
     </div>
-    <div class="page-header__nav_wrap">
+
+    <div class="page-header__nav-wrap">
       <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__active"><a href="index.html">Информация</a></li>
-          <li><a href="">Возможности></a></li>
-          <li><a href="">Отзывы</a></li>
-          <li><a href="">Стоимость</a></li>
+          <li class="main-nav__item main-nav__item--current"><a class="main-nav__link" href="index.html">Информация</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="">Возможности</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="">Отзывы</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="">Стоимость</a></li>
         </ul>
-        <button class="main-nav__toogle main-nav__toogle--colose"></button>
       </nav>
     </div>
-  </head>
+
+  </header>
 
 
 
   <main>
     <section class="hero">
-      <div class="hero__title">Взгяните на жизнть иначе</div>
-      <a href="" class="btn-dowload">Скачать приложение</a>
-      <div class="platforms">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Window 8</div>
+      <div class="hero__inner">
+        <h2 class="hero__title">Взгяните на жизнть иначе</h2>
+        <div class="hero__content">
+          <a href="" class="btn-dowload">Скачать приложение</a>
+          <ul class="apps-list">
+            <li class="apps-list__item apps-list__item--ios"></li>
+            <li class="apps-list__item apps-list__item--android"></li>
+            <li class="apps-list__item apps-list__item--windows"></li>
+          </ul>
+          <div class="hero__content-text">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Window 8</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo-headers">
+      <div>Устали от серости мегаполиса?</div>
+      <div>Нам есть, что вам предложить!</div>
     </section>
 
     <section class="features">
-      <header class="features__header">
-        <div>Устали от серости мегаполиса?</div>
-        <div>Нам есть, что вам предложить!</div>
-      </header>
-      <div class="feature">
-        <div class="feature__title">Поднимает настроение</div>
-        <div class="features__description">Приложение поволит вам подить осеннюю хандру и депрессию буквально в несколько кликов!</div>
+      <div class="features__item">
+        <div class="features__item-title">Поднимает настроение</div>
+        <div class="features__item-description">Приложение поволит вам подить осеннюю хандру и депрессию буквально в несколько кликов!</div>
       </div>
-      <div class="featur">
-        <div class="features__title">Меняет мир вокруг</div>
-        <div class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подпиью, что бы усилить эффект</div>
+      <div class="features__item">
+        <div class="features__item-title">Меняет мир вокруг</div>
+        <div class="features__item-description">Сделайте снимок и украсьте его смайликом или текстовой подпиью, что бы усилить эффект</div>
       </div>
-      <div class="feature">
-        <div class="features__title">Заводит новых друзей</div>
-        <div class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</div>
+      <div class="features__item">
+        <div class="features__item-title">Заводит новых друзей</div>
+        <div class="features__item-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</div>
       </div>
     </section>
 
@@ -65,7 +83,12 @@
 
     <section class="reviews">
       <div class="slider-review">
-        <div class="slider-review__item">
+        <div class="dot-block">
+          <div class="active"></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="slider-review__item active">
           <div class="slider-review__name">Николай Петров</div>
           <div class="slider-review__info">25 лет, водитель трамвая</div>
           <div class="slider-review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще ф познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</div>
@@ -80,57 +103,115 @@
           <div class="slider-review__info">25 лет, водитель трамвая</div>
           <div class="slider-review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще ф познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</div>
         </div>
+
       </div>
     </section>
 
     <section class="price">
-      <table class="price__table">
-        <thead>
-          <tr>
-            <th>База 1,99 USD</th>
-            <th>Стандарт 3,99 USD</th>
-            <th>Анлим 9,99 USD</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Розовый фильтр</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Смайлики</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Комментарии</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+      <input type="radio" class="price__toggle" id="price-1" name="price">
+      <input type="radio" class="price__toggle" id="price-2" name="price" checked>
+      <input type="radio" class="price__toggle" id="price-3" name="price">
+      <div class="price__controls">
+        <label for="price-1" class="price__control"></label>
+        <label for="price-2" class="price__control"></label>
+        <label for="price-3" class="price__control"></label>
+      </div>
+
+      <div class="price__table-wrap">
+        <table class="price-table">
+          <thead class="price-table__head">
+            <tr class="price-table__row">
+              <th class="price-table__heading">
+                <b class="price-table__name">База</b>
+                <span class="price-table__value">1,99 USD</span>
+              </th>
+              <th class="price-table__heading">
+                <div class="price-table__flag price-table__flag--hit"></div>
+                <b class="price-table__name">Стандарт</b>
+                <span class="price-table__value">3,99 USD</span>
+              </th>
+              <th class="price-table__heading">
+                <b class="price-table__name">Анлим</b>
+                <span class="price-table__value">9,99 USD</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="price-table__body">
+            <tr class="price-table__row">
+              <td class="price-table__cell">Розовый фильтр</td>
+              <td class="price-table__cell" data-content="Розовый фильтр"><i class="icon icon--yes"></i></td>
+              <td class="price-table__cell" data-content="Розовый фильтр"><i class="icon icon--yes"></i></td>
+              <td class="price-table__cell" data-content="Розовый фильтр"><i class="icon icon--yes"></i></td>
+            </tr>
+            <tr class="price-table__row">
+              <td class="price-table__cell">Смайлики</td>
+              <td class="price-table__cell" data-content="Смайлики"><i class="icon icon--no"></i></td>
+              <td class="price-table__cell" data-content="Смайлики"><i class="icon icon--yes"></i></td>
+              <td class="price-table__cell" data-content="Смайлики"><i class="icon icon--yes"></i></td>
+            </tr>
+            <tr class="price-table__row">
+              <td class="price-table__cell">Комментарии</td>
+              <td class="price-table__cell" data-content="Комментарии"><i class="icon icon--no"></i></td>
+              <td class="price-table__cell" data-content="Комментарии"><i class="icon icon--no"></i></td>
+              <td class="price-table__cell" data-content="Комментарии"><i class="icon icon--yes"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <section class="about">
-      <div class="about__title">
-        Остались вопросы? Свяжитесь с нами!
+    <section class="contacts">
+      <div class="contacts__inner">
+        <div class="contacts__title">
+          Остались вопросы?
+          <br> Свяжитесь с нами!
+        </div>
+        <div class="contacts__items">
+          <div class="contacts__item"><span class="contacts__item-title">Звоните:</span> <a class="contacts__item-link" href="tel:88001000900">8 (800) 1000 900</a></div>
+          <div class="contacts__item"><span class="contacts__item-title">Пишите:</span> <a class="contacts__item-link" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></div>
+          <div class="contacts__item"><span class="contacts__item-title">Приезжайте в гости:</span><span class="contacts__item-link">Сантк-Петербург,<br> Невский проспект, д.20</span></div>
+        </div>
       </div>
-      <div class="about__phone">Звоните: 8 (800) 1000 900</div>
-      <div class="about__email">Пишите: hello@pinkapp.ru</div>
-      <div class="about__address">Приезжайте в гости: Сантк-Петербургб Невский проспект, д.20</div>
     </section>
 
     <section class="map">
-      <div class="yandex-map"></div>
+      <div class="map__container" id="map"></div>
     </section>
   </footer>
 
 
 
-  <!-- <script src="js/script.js"></script> -->
+   <script src="js/script.js"></script> 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script>
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+          center: [56.0126, 37.8479],
+          zoom: 15,
+          controls: []
+        }, {
+          searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark([56.0126, 37.8479], {
+          hintContent: 'Мы находимся здесь'
+        }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/map-point.png',
+          // Размеры метки.
+          iconImageSize: [36, 36],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-18, -18]
+        });
+
+      myMap.geoObjects.add(myPlacemark);
+    });
+  </script>
 
 </body>
 

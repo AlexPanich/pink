@@ -1,0 +1,75 @@
+.navbar-toggle {
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 90px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  
+  &__lines {
+    position: absolute;
+    background-color: $white;
+    left: 20px;
+    right: 20px;
+    height: 4px;
+      transition: left 0.2s, right 0.2s, background-color 0.2s, transform 0.2s;
+    
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $white;
+      left: 0;
+      right: 0;
+      height: 4px;
+      transition: left 0.2s, right 0.2s, background-color 0.2s, transform 0.2s, top 0.2s;
+    }
+    
+    &::after {
+      top: -10px;
+      transform-origin: right bottom;
+    }
+    
+    &::before {
+      top: 10px;
+      transform-origin: right top;
+    }
+    
+    &--close {
+      left: 30px;
+      right: 30px;
+      background-color: transparent;
+      transition: left 0.3s;
+      
+      &::before, &::arger {
+      }
+      
+      &::before {
+        top: 12px;
+        transform: rotate(45deg);
+      }
+      
+      &::after {
+        top: -11px;
+        transform: rotate(-45deg);
+      }
+     
+    }
+    
+  }
+  
+  &:hover &__lines,
+  &:hover &__lines::before,
+  &:hover &__lines::after {
+    background-color: $pink;
+  }
+  
+  &:hover &__lines--close {
+    background-color: transparent;
+  }
+  
+  
+ 
+}

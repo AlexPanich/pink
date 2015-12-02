@@ -1,0 +1,12 @@
+.logo {
+  float: left;
+  text-transform: uppercase;
+}
+
+.logo__link:hover {
+  text-decoration: none;
+}
+
+.logo__img {
+  display: none;
+}

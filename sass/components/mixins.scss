@@ -1,0 +1,11 @@
+@mixin font($fs: $fs-base, $lh: $lh-base, $fw: $fs-base, $color: $color-base) {
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $color;
+}
+
+@mixin container() {
+  padding: 0 20px;
+  margin: 0 auto;
+}

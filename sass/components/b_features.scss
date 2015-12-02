@@ -1,0 +1,35 @@
+.features {
+  position: relative;
+  background-color: $gray-bg-color;
+  background-image: url("../img/bg-features-phone.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-top: 85px;
+  padding-bottom: 278px;
+  
+  &__item {
+    @include container();
+    
+    &-title {
+      @include font($fs-4, $lh-caption, $fw-bold, $black);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    &-description {
+      width: 90%;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+  }
+  
+  &::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    height: 35px;
+    width: 100%;
+    background: linear-gradient(to right bottom, $white 50%, $gray-bg-color 50%);
+  }
+
+}

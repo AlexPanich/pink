@@ -1,0 +1,51 @@
+// colors
+
+$blue-1: #1d2631;
+$blue-2: #283645;
+$blue-3: #485461;
+$pink: #d22856;
+$black: #000;
+$white: #fff;
+$gray-1: #f2f2f2;
+$gray-2: #e5e5e5;
+
+
+$hero-bg-color: $blue-1;
+$gray-bg-color: $gray-1;
+$menu-color: rgba($black, 0.3);
+$menu-color-active: $blue-2;
+$nav-link-color: $white;
+$nav-link-color-current: $pink;
+$nav-link-color-hover: $pink;
+$nav-link-color-active: rgba($pink, 0.3);
+$dot-color: rgba($blue-2, 0.3);
+$dot-color-hover: rgba($blue-2, 0.6);
+$dot-color-down: rgba($blue-2, 0.1);
+$dot-color-active: $blue-2;
+$link-color: $pink;
+$link-color-hover: $blue-2;
+$link-color-active: rgba($blue-2, 0.3);
+$heading-color: $blue-2;
+$table-border-color: $gray-2;
+$table-heading-color: $blue-2;
+
+//typography
+
+$font-open-sans: 'Open Sans', Helvetica, Arial, sans-serif;
+
+$fs-base: 14px;
+$lh-base: ($fs-base * 1.7142857);
+$lh-caption: 28px;
+$ff-base: $font-open-sans;
+$color-base: $blue-2;
+$fw-light: 300;
+$fw-normal: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$fs-1: ceil($fs-base * 2.286); //32
+$fs-2: ceil($fs-base * 1.714); //24
+$fs-3: ceil($fs-base * 1.5);   //21
+$fs-4: ceil($fs-base * 1.286); //18
+$fs-5: $fs-base;               //14
+$fs-6: ceil($fs-base * 0.857); //12
