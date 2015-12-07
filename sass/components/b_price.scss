@@ -8,9 +8,13 @@
     position: absolute;
     top: 0;
     content: "";
-    height: 35px;
+    height: 5%;
     width: 100%;
     background: linear-gradient(to right bottom, $white 50%, $gray-bg-color 50%);
+    
+    @media (min-width: 700px) {
+      height: 10%;
+    }
   }
   
   &__toggle {
@@ -26,6 +30,10 @@
     z-index: 10;
     display: flex;
     justify-content: center;
+    
+    @media (min-width: 700px) {
+      display: none;
+    }
   }
   
   &__control {
@@ -73,6 +81,18 @@
   
   &__toggle[id="price-3"]:checked ~ &__table-wrap .price-table {
     transform: translateX(-64%);
+  }
+  
+  @media (min-width: 700px) {
+    padding-bottom: 67px;
+    
+    & .price-table {
+      transform: none !important;
+    }
+    
+    &__table-wrap {
+      @include container();
+    }
   }
   
 }

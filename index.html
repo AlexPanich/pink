@@ -15,7 +15,7 @@
     <div class="page-header__navbar">
       <div class="page-header__inner">
         <div class="logo">
-          <a href="" class="logo__link"><img class="logo__img" src="img/logo.svg" alt="Логотип PINK">Pink</a>
+          <a href="" class="logo__link"><img class="logo__img" src="img/white-logo.png" alt="Логотип PINK">Pink</a>
         </div>
         <button class="navbar-toggle" type="button">
           <span class="navbar-toggle__lines"></span>
@@ -41,7 +41,7 @@
   <main>
     <section class="hero">
       <div class="hero__inner">
-        <h2 class="hero__title">Взгяните на жизнть иначе</h2>
+        <h2 class="hero__title">Взгляните на жизнть иначе!</h2>
         <div class="hero__content">
           <a href="" class="btn-dowload">Скачать приложение</a>
           <ul class="apps-list">
@@ -55,8 +55,8 @@
     </section>
 
     <section class="promo-headers">
-      <div>Устали от серости мегаполиса?</div>
-      <div>Нам есть, что вам предложить!</div>
+      <div class="promo-headers__item">Устали от серости мегаполиса?</div>
+      <div class="promo-headers__item">Нам есть, что вам предложить!</div>
     </section>
 
     <section class="features">
@@ -74,11 +74,13 @@
       </div>
     </section>
 
-    <section class="round-diagramm">
-      <div class="round-diagramm__title">Эффект на 24 часа</div>
-      <div class="round-diagramm__text">Британские учениы провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+    <section class="round-diagram">
+      <div class="round-diagram__inner">
+        <div class="round-diagram__title">Эффект <span><br></span> на 24 часа!</div>
+        <div class="round-diagram__text">Британские учениы провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+        </div>
+        <a href="#" class="round-diagram__link">Узнать больше об исследовании</a>
       </div>
-      <a href="#" class="round-diagramm__link">Узнать больше об исследовании</a>
     </section>
 
     <section class="reviews">
@@ -121,6 +123,7 @@
         <table class="price-table">
           <thead class="price-table__head">
             <tr class="price-table__row">
+              <th class="price-table__heading hidden"></th>
               <th class="price-table__heading">
                 <b class="price-table__name">База</b>
                 <span class="price-table__value">1,99 USD</span>
@@ -161,6 +164,8 @@
     </section>
   </main>
 
+
+
   <footer class="page-footer">
     <section class="contacts">
       <div class="contacts__inner">
@@ -179,11 +184,31 @@
     <section class="map">
       <div class="map__container" id="map"></div>
     </section>
+
+    <section class="footer-bottom">
+      <div class="footer-bottom__inner">
+        <div class="logo">
+          <a href="" class="logo__link"><img class="logo__img" src="img/pink-logo.png" alt="Логотип PINK">Pink</a>
+        </div>
+        <div class="social">
+          <a class="social__btn social__btn--twiter"></a>
+          <a class="social__btn social__btn--facebook"></a>
+          <a class="social__btn social__btn--youtube"></a>
+        </div>
+        <div class="copyright">
+          Website by
+          <a class="copyright__link copyright__link--glukhanko" href="#"></a>
+          for
+          <a class="copyright__link copyright__link--htmlacademy" href="#"></a>
+        </div>
+      </div>
+    </section>
+
   </footer>
 
 
 
-   <script src="js/script.js"></script> 
+  <script src="js/script.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script>
     ymaps.ready(function () {

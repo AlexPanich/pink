@@ -2,14 +2,17 @@
   position: relative;
   @include container();
   padding-bottom: 90px;
+
   
   &__item {
     display: none;
     
     &.active {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
-
+    
+   
   }
   
   &__name {
@@ -20,6 +23,7 @@
   
   &__info {
     display: none;
+    
   }
   
   &__text {
@@ -31,6 +35,27 @@
     display: none;
   }
   
-  
+  @media (min-width: 700px) {
+    
+    
+    &__name {
+      order: 2;
+      @include font(20px, 30px, $fw-bold, $black);
+      margin-bottom: 0;
+    }
+    
+    &__info {
+      display: block;
+      order: 3;
+      @include font();
+      text-align: center;
+    }
+    
+    &__text {
+      order: 1;
+      @include font(18px, 30px);
+      margin-bottom: 40px;
+    }
+  }
   
 } 

@@ -9,6 +9,7 @@
       width: 29px;
       height: 22px;
       background-image: url('../img/icon-yes.png');
+      
     }
   }
   
@@ -19,6 +20,23 @@
       width: 26px;
       height: 26px;
       background-image: url('../img/icon-no.png');
+    }
+  }
+  
+  @media (min-width: 700px) {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    &--yes, 
+    &--no {
+      &:before{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }

@@ -55,10 +55,26 @@
         top: -11px;
         transform: rotate(-45deg);
       }
+      
      
     }
+     
+  }
+  
+  @media (min-width: 700px) {
+    width: 110px;
+    
+    &__lines {
+      right: 40px;
+      
+      &--close {
+        right: 50px;
+      }
+    }
+    
     
   }
+  
   
   &:hover &__lines,
   &:hover &__lines::before,

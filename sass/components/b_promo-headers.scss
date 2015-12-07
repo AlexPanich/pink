@@ -4,9 +4,26 @@
   text-align: center;
   background-color: $white;
   
-  & div {
+  
+  @media (min-width: 700px) {
+    padding-top: 55px;
+    @include font(40px, 48px, $fw-light, $heading-color);
+  }
+  
+  &__item {
     @include container();
     width: 90%;
     margin-bottom: 30px;
+    
+    @media (min-width: 700px) {
+      width: 100%;
+      margin-bottom: 0;
+      
+      &:last-child {
+        padding: 0 20%;
+        min-height: 96px; 
+        margin-bottom: 50px;
+      }
+    }
   }
 }

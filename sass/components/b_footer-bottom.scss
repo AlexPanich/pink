@@ -1,0 +1,17 @@
+.footer-bottom {
+  display: none;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  
+  &__inner {
+    @include container();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  @media (min-width: 700px) {
+    display: block;
+  }
+}

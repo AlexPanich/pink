@@ -1,0 +1,42 @@
+.social {
+  display: flex;
+  flex-basis: row;
+  justify-content: space-around;
+  
+  &__btn {
+    display: block;
+    background-color: $white;
+    border: 3px solid $social-border-color; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 6px;
+    background-image: url("../img/sprite-social.png");
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    padding: 10px;
+    transition: border-color $time-animation-2;
+    
+    
+    &--twiter {
+      background-position: 3px -35px;
+    }
+    
+    &--facebook {
+      background-position: 7px 2px;
+    }
+    
+    &--youtube {
+      background-position: 6px -69px;
+    }
+    
+    &:hover {
+      border-color: $social-border-hover-color;
+    }
+    
+    &:active {
+      opacity: 0.3;
+    }
+  } 
+  
+}

@@ -4,16 +4,40 @@
   background-image: url("../img/bg-features-phone.png");
   background-position: center bottom;
   background-repeat: no-repeat;
-  padding-top: 85px;
+  padding-top: 100px;
   padding-bottom: 278px;
+  display: flex;
+  flex-direction: column;
+  
+  @media (min-width: 700px) { 
+    background-image: none;
+    padding-bottom: 0;
+    padding-top: 70px;
+    align-items: flex-end;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      width: 268px;
+      height: 482px;
+      background-image: url("../img/bg-features-phone-700.png");
+      bottom: 0;
+      left: 40px;
+    }
+  }
   
   &__item {
     @include container();
+    
     
     &-title {
       @include font($fs-4, $lh-caption, $fw-bold, $black);
       text-align: center;
       margin-bottom: 10px;
+      
+      @media (min-width: 700px) {
+        text-align: left;
+      }
     }
     
     &-description {
@@ -21,16 +45,31 @@
       width: 90%;
       text-align: center;
       margin-bottom: 35px;
+      min-height: ($lh-base * 3);
+      
+      @media (min-width: 700px) {
+        text-align: left;
+      }
     }
+    
+    @media (min-width: 700px) {
+      width: 50%;
+      margin: 0;
+    }
+    
   }
   
   &::before {
     position: absolute;
     top: 0;
     content: "";
-    height: 35px;
+    height: 5%;
     width: 100%;
     background: linear-gradient(to right bottom, $white 50%, $gray-bg-color 50%);
+    
+    @media (min-width: 700px) {
+      height: 10%;
+    }
   }
 
 }

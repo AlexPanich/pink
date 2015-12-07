@@ -4,9 +4,29 @@
     @include font($fs-1, $lh-caption, $fw-normal, $white );
     text-decoration: none;
     text-transform: uppercase;
+    
   }
   
   &__img {
     display: none;
+    
+    @media (min-width: 700px) {
+      display: inline-block;
+      vertical-align: bottom;
+      margin-right: 10px;
+      
+    }
+  }
+  
+  &:active {
+    opacity: 0.3;
+  }
+  
+  .page-footer &__link {
+    color: $blue-2;
+  }
+  
+  .page-footer &__img {
+    
   }
 }

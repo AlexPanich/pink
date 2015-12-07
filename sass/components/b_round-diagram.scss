@@ -1,0 +1,44 @@
+.round-diagram {
+  display: none;
+  
+    
+  &__inner {
+    @include container();
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    align-items: flex-end;
+    background: url("../img/br-round-diagram.png") no-repeat left center;
+    background-origin: content-box;
+
+    & > * {
+      width: 50%;
+    }
+    
+  }
+  &__title {
+    @include font(30px, 36px, $fw-bold, $black);
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include font();
+    margin-bottom: 10px; 
+    min-height: ($lh-base * 4);
+  }
+
+  &__link {
+    @include font($color: $link-color);
+
+    &:hover {
+      color: $link-color-hover;
+      text-decoration: none;
+    }
+  }
+    
+  @media (min-width: 700px) {
+    display: block;
+  }
+    
+}
