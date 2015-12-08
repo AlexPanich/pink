@@ -12,9 +12,13 @@
     @include container();
     height: 100%;
     
+    
+  }
+  
+  &__content-wrap {
+    
     @media (min-width: 700px) {
-      padding: 0 20px;
-      width: 340px;
+      width: 300px;
       margin: 0;
       float: left;
     }
@@ -30,6 +34,11 @@
     @media (min-width: 700px) {
       @include font(40px, 48px, $fw-light, $white);
       margin-bottom: 31px;
+    }
+    
+    @media (min-width: 960px) {
+      @include font(50px, 60px, $fw-light, $white);
+      margin-bottom: 52px;
     }
   }
   
@@ -68,5 +77,13 @@
     background-position: left 50% bottom 0, center center;
     background-size: auto, cover;
     padding-top: 204px;
+  }
+  
+  @media (min-width: 960px) {
+    height: 854px;
+    background-image: url("../img/bg-hero-hand-960.png"), url("../img/bg-hero-back-960.jpg");
+    background-position: left 80% bottom 0, center center;
+    background-size: auto 635px, cover;
+    padding-top: 217px;
   }
 }

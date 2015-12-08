@@ -17,7 +17,6 @@
     padding: 18px 0;
     background-color: $menu-color;
     border-bottom: 1px solid transparent;
-    z-index: 90;
     
     &--active {
       background-color: $menu-color-active;
@@ -33,13 +32,36 @@
   &__nav-wrap {
     position: absolute;
     width: 100%;
-    z-index: 80;
-    transform: translateY(-1000px);
-    transition: transform 0s;
+    left: 0;
+    top: 100%;
+    margin-top: 1px;
+    overflow: hidden;
+    height: 0;
+    
+    & .main-nav {
+      transform: translateY(-1000px);
+      transition: transform 0s;
+    }
     
     &--drop-down {
-      transform: translateY(0);
-      transition: transform .2s ease-out;
+      height: auto;
+      
+      & .main-nav {
+        transform: translateY(0);
+        transition: transform .2s ease-out;
+      }
+    }
+    
+    @media (min-width: 960px) {
+      position: static;
+      height: auto;
+      width: 620px;
+      display: flex;
+      align-items: center;
+      
+      & .main-nav {
+        transform: translateY(0);
+      }
     }
   }
   

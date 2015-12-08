@@ -18,4 +18,13 @@
   &:active {
     color: $link-color-active;
   }
+  
+  @media (min-width: 700px) {
+    margin: 0;
+  }
+  
+  @media (min-width: 960px) {
+    @include font($fs-3, $fs-4, $fw-bold, $white);
+    width: 300px;
+  }
 }

@@ -75,6 +75,9 @@
     
   }
   
+  @media (min-width: 960px) {
+    display: none;
+  }
   
   &:hover &__lines,
   &:hover &__lines::before,

@@ -10,8 +10,16 @@
     @include font(40px, 48px, $fw-light, $heading-color);
   }
   
-  &__item {
+  @media (min-width: 960px) {
+    padding-top: 67px;
+    @include font(50px, 60px, $fw-light, $heading-color);
+  }
+  
+  &__inner {
     @include container();
+  }
+  
+  &__item {
     width: 90%;
     margin-bottom: 30px;
     
@@ -23,6 +31,12 @@
         padding: 0 20%;
         min-height: 96px; 
         margin-bottom: 50px;
+      }
+    }
+    
+    @media (min-width: 960px) {
+      &:last-child {
+        margin-bottom: 75px;
       }
     }
   }
