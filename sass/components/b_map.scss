@@ -18,9 +18,9 @@
     background-image: 
       linear-gradient(to right top, transparent 50%, $white 50%),
       linear-gradient(to left top, transparent 50%, $white 50%);
-    background-size: 51% 100%;
+    background-size: 50.2% 100%;
     background-repeat: no-repeat;
-    background-position: left top, right top;
+    background-position: left  top, right top;
     
     @media (min-width: 960px) {
       height: 125px;

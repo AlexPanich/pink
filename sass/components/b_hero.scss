@@ -1,11 +1,19 @@
 .hero {
   background-color: transparent, $hero-bg-color;
-  background-image: url("../img/bg-hero-hand.png"), url("../img/bg-hero-back.jpg");
+  background-image: url("../img/iphone-hand-1.png"), url("../img/background-1@1x.jpg");
   background-repeat: no-repeat;
-  background-position: left 0 bottom 245px, center top;
-  background-size: auto, 100%;
+  background-position: left 0 bottom 272px, center top -10px;
+  background-size: 258px 286px, auto 70%;
   height: 729px;
   padding-top: 85px;
+  
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/iphone-hand-1@2x.png"), url("../img/background-1@2x.jpg");  
+  }
+  
+  @media (min-resolution: 216dpi), (min-resolution: 2.5dppx) {
+    background-image: url("../img/iphone-hand-1@3x.png"), url("../img/background-1@3x.jpg"); 
+  }
   
   &__inner {
     position: relative;
@@ -73,17 +81,30 @@
   }
   
   @media (min-width: 700px) {
-    background-image: url("../img/bg-hero-hand-700.png"), url("../img/bg-hero-back-700.jpg");
+    background-image: url("../img/iphone-hand-2@1x.png"), url("../img/background-1@1x.jpg");
     background-position: left 50% bottom 0, center center;
-    background-size: auto, cover;
+    background-size: 700px 545px, cover;
     padding-top: 204px;
+    
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/iphone-hand-2@2x.png"), url("../img/background-1@2x.jpg");
+    }
+    
+    @media (min-resolution: 216dpi), (min-resolution: 2.5dppx) {
+      background-image: url("../img/iphone-hand-2@2x.png"), url("../img/background-1@3x.jpg");
+    }
   }
   
   @media (min-width: 960px) {
     height: 854px;
-    background-image: url("../img/bg-hero-hand-960.png"), url("../img/bg-hero-back-960.jpg");
+    background-image: url("../img/iphone-hand-3@1x.png"), url("../img/background-2@1x.jpg");
     background-position: left 80% bottom 0, center center;
-    background-size: auto 635px, cover;
+    background-size: 1050px 645px, cover;
     padding-top: 217px;
+    
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/iphone-hand-3@2x.png"), url("../img/background-2@2x.jpg");
+    }
+    
   }
 }
