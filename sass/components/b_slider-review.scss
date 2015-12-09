@@ -12,6 +12,10 @@
       flex-direction: column;
     }
     
+    @media (min-width: 960px) {
+      width: 700px;
+      margin: 0 auto;
+    }
    
   }
   
@@ -19,6 +23,7 @@
     @include font($fs-4, $lh-caption, $fw-bold, $black);
     text-align: center;
     margin-bottom: 20px;
+    
   }
   
   &__info {
@@ -29,10 +34,46 @@
   &__text {
     @include font($fs-5, 30px);
     text-align: center;
+    
+    &::before {
+      content: "\00ab";
+    }
+    
+    &::after {
+      content: "\00bb";
+    }
   }
   
   & input {
     display: none;
+  }
+  
+  
+  &__arrow {
+    position: absolute;
+    display: none;
+    border: none;
+    outline: none;
+    width: 22px;
+    height: 42px;
+    top: 20px;
+    background-color: transparent;
+    opacity: 0.3;
+    
+    
+    &--left {
+      left: 0;
+      background-image: url("../img/sprite-left-arrow.png");
+    }
+    
+    &--right {
+      right: 0;background-image: url("../img/sprite-right-arrow.png");
+    }
+    
+    &:hover {
+      opacity: 1;
+    }
+    
   }
   
   @media (min-width: 700px) {
@@ -55,6 +96,32 @@
       order: 1;
       @include font(18px, 30px);
       margin-bottom: 40px;
+    }
+  }
+  
+  @media (min-width: 960px) {
+    padding-bottom: 38px;
+    
+    &__name {
+      @include font(24px, 30px, $fw-bold, $black);
+      margin-bottom: 3px;
+    }
+    
+    &__info {
+      @include font(18px, 30px)
+    }
+    
+    &__text {
+      margin-bottom: 36px;
+      
+      &::before,
+      &::after {
+        content: "";
+      }
+    }
+    
+    &__arrow {
+      display: block;
     }
   }
   

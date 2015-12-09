@@ -6,4 +6,11 @@
   @media (min-width: 700px) {
     padding-top: 70px;
   }
+  
+  @media (min-width: 960px) {
+    padding-top: 186px;
+    background-image: url("../img/bg-reviews-quote.png");
+    background-repeat: no-repeat;
+    background-position: center top 74px;
+  }
 }

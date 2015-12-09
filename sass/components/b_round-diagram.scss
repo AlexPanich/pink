@@ -9,23 +9,49 @@
     padding-top: 100px;
     padding-bottom: 50px;
     align-items: flex-end;
-    background: url("../img/br-round-diagram.png") no-repeat left center;
+    background: url("../img/bg-round-diagram.png") no-repeat left center;
     background-origin: content-box;
 
     & > * {
       width: 50%;
+      
+      @media (min-width: 960px) {
+        width: 575px;
+      }
+    }
+    
+    @media (min-width: 960px) {
+      background-image: url("../img/bg-round-diagram-960.png");
+      background-position: left -92px;
+      padding-top: 122px;
+      padding-bottom: 116px;
+      
+      & span {
+        display: none;
+      }
+      
     }
     
   }
   &__title {
     @include font(30px, 36px, $fw-bold, $black);
     margin-bottom: 10px;
+    
+    @media (min-width: 960px) {
+      margin-bottom: 22px;
+    }
   }
 
   &__text {
     @include font();
     margin-bottom: 10px; 
     min-height: ($lh-base * 4);
+    
+    @media (min-width: 960px) {
+      @include font($fs-4, 30px);
+      min-height: 120px;
+      margin-bottom: 3px;
+    }
   }
 
   &__link {
@@ -35,10 +61,18 @@
       color: $link-color-hover;
       text-decoration: none;
     }
+    
+    @media (min-width: 960px) {
+      font-size: $fs-4;
+    }
   }
     
   @media (min-width: 700px) {
     display: block;
+  }
+  
+  @media (min-width: 960px) {
+    background-color: $gray-bg-color;
   }
     
 }

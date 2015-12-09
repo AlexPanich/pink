@@ -36,15 +36,21 @@
     width: 74px;
     height: 74px;
     z-index: 10;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     &--hit {
       background-image: url('../img/table-flag-hit.png');
-      background-repeat: no-repeat;
-      background-size: cover;
     }
     
     @media (min-width: 700px) {
       width: 60px;
       height: 60px;
+    }
+    
+    @media (min-width: 960px) {
+      width: 74px;
+      height: 74px;
     }
   }
   
@@ -61,6 +67,11 @@
       @include font(16px, 30px, $fw-bold, $white);
       margin-bottom: 0;
     }
+    
+    @media (min-width: 960px) {
+      @include font($fs-4, 30px, $fw-bold, $white);
+      margin-bottom: 2px;
+    }
   }
   
   &__value {
@@ -68,6 +79,10 @@
     
     @media (min-width: 700px) {
       @include font(18px, 30px, $fw-light, $white);
+    }
+    
+    @media (min-width: 960px) {
+      @include font($fs-2, 30px, $fw-light, $white);
     }
   }
   
@@ -81,6 +96,10 @@
     
     @media (min-width: 700px) {
       padding: 7px 15px;
+    }
+    
+    @media (min-width: 960px) {
+      padding: 14px 25px;
     }
   }
   
@@ -100,7 +119,7 @@
     
     &__cell:first-child {
       display: table-cell;
-      @include font($fs-5, 30px, $fw-normal, $black);
+      @include font($fs-5, 30px, $fw-normal);
       text-transform: capitalize;
     }
     
@@ -117,4 +136,16 @@
       padding: 10px;
     }
   } 
+  
+  @media (min-width: 960px) {
+    
+    &__heading {
+      padding-top: 16px;
+      padding-bottom: 20px;
+    }
+    
+    &__cell:first-child {
+      @include font($fs-4, 30px, $fw-normal);
+    }
+  }
 }

@@ -8,12 +8,12 @@
     position: absolute;
     top: 0;
     content: "";
-    height: 5%;
+    height: 10vw;
     width: 100%;
     background: linear-gradient(to right bottom, $white 50%, $gray-bg-color 50%);
     
     @media (min-width: 700px) {
-      height: 10%;
+      height: 8vw;
     }
   }
   
@@ -93,6 +93,11 @@
     &__table-wrap {
       @include container();
     }
+  }
+  
+  @media (min-width: 960px) {
+    padding-top: 156px;
+    padding-bottom: 97px;
   }
   
 }
