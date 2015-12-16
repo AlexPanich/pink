@@ -2,19 +2,20 @@
   display: none;
   padding-top: 36px;
   padding-bottom: 36px;
-  
+
   &__inner {
-    @include container();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+
+    @include container();
   }
 
   @media (min-width: 700px) {
     display: block;
   }
-  
+
   @media (min-width: 960px) {
     padding-top: 74px;
     padding-bottom: 74px;

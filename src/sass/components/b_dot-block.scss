@@ -1,40 +1,42 @@
 .dot-block {
   position: absolute;
-  bottom: 45px;
   right: 0;
+  bottom: 45px;
   left: 0;
+
   display: flex;
   justify-content: center;
 
   & div {
     width: 6px;
     height: 6px;
+    margin: 0 10px;
+
     background-color: $dot-color;
     border-radius: 50%;
-    margin: 0 10px;
     cursor: pointer;
+
     transition: background-color $time-animation-2, box-shadow $time-animation-2;
-    
+
     &.active {
-      box-shadow: 0 0 0 3px $dot-color-active;
       background-color: transparent;
+      box-shadow: 0 0 0 3px $dot-color-active;
       cursor: default;
       &:hover,
       &:active {
         background-color: transparent;
       }
     }
-    
+
     &:hover {
       background-color: $dot-color-hover;
     }
-    
+
     &:active {
       background-color: $dot-color-down;
     }
-    
   }
-  
+
   @media (min-width: 960px) {
     display: none;
   }

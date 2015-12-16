@@ -1,16 +1,33 @@
-h1, h2, h3, h4, h5, h6 {
-  font-family: $ff-base;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $fw-light;
   line-height: $lh-caption;
+  font-family: $ff-base;
   color: $heading-color;
 }
 
-h1 { font-size: $fs-1; }
-h2 { font-size: $fs-2; }
-h3 { font-size: $fs-3; }
-h4 { font-size: $fs-4; }
-h5 { font-size: $fs-5; }
-h6 { font-size: $fs-6; }
+h1 {
+  font-size: $fs-1;
+}
+h2 {
+  font-size: $fs-2;
+}
+h3 {
+  font-size: $fs-3;
+}
+h4 {
+  font-size: $fs-4;
+}
+h5 {
+  font-size: $fs-5;
+}
+h6 {
+  font-size: $fs-6;
+}
 
 p {
   margin: 0 0 ($lh-base / 2);

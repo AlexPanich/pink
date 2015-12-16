@@ -1,39 +1,44 @@
 .promo-headers {
   padding-top: 45px;
-  @include font($fs-2, $lh-caption, $fw-light, $heading-color);
+
   text-align: center;
+
   background-color: $white;
-  
-  
+
+  @include font($fs-2, $lh-caption, $fw-light, $heading-color);
+
+
   @media (min-width: 700px) {
     padding-top: 55px;
+
     @include font(40px, 48px, $fw-light, $heading-color);
   }
-  
+
   @media (min-width: 960px) {
     padding-top: 67px;
+
     @include font(50px, 60px, $fw-light, $heading-color);
   }
-  
+
   &__inner {
     @include container();
   }
-  
+
   &__item {
     width: 90%;
     margin-bottom: 30px;
-    
+
     @media (min-width: 700px) {
       width: 100%;
       margin-bottom: 0;
-      
+
       &:last-child {
-        padding: 0 20%;
-        min-height: 96px; 
+        min-height: 96px;
         margin-bottom: 50px;
+        padding: 0 20%;
       }
     }
-    
+
     @media (min-width: 960px) {
       &:last-child {
         margin-bottom: 75px;

@@ -3,97 +3,98 @@
   &__inner {
     @include container();
   }
-  
+
   &__title {
-    @include font($fs-2, $lh-caption, $fw-light);
-    text-align: center;
     margin-bottom: 40px;
-    
+
+    text-align: center;
+
+    @include font($fs-2, $lh-caption, $fw-light);
+
     @media (min-width: 700px) {
-      @include font(40px, 49px, $fw-light);
       margin-bottom: 45px;
+
+      @include font(40px, 49px, $fw-light);
     }
-    
+
     @media (min-width: 960px) {
-      @include font(50px, 60px, $fw-light);
       margin-bottom: 60px;
-      
+
+      @include font(50px, 60px, $fw-light);
     }
   }
-  
+
   &__items {
     display: flex;
     flex-direction: column;
-    
+
     @media (min-width: 700px) {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: stretch;
     }
   }
-  
+
   &__item {
     margin-bottom: 30px;
-    
+
     & a:hover {
-      text-decoration: underline;
       color: $link-color-hover;
+      text-decoration: underline;
     }
-    
+
     & a:active {
-      text-decoration: none;
       color: $link-color-active;
+      text-decoration: none;
     }
-    
+
     @media (min-width: 700px) {
-      flex-basis: 50%;
       flex-grow: 1;
+      flex-basis: 50%;
       margin-bottom: 55px;
     }
-    
+
     @media (min-width: 960px) {
-      flex-basis: 33%;
-      
+      flex-basis: 33%;
+      margin-bottom: 0;
+
       &:nth-child(1) {
         order: 1;
       }
-      
+
       &:nth-child(2) {
         order: 3;
       }
-      
+
       &:nth-child(3) {
         order: 2;
       }
-      
-      margin-bottom: 0;
     }
   }
-  
+
   &__item-title {
     display: block;
-    @include font($fs-4, $fs-4, $fw-bold);
-    text-align: center;
     margin-bottom: 5px;
-    
+
+    text-align: center;
+
+    @include font($fs-4, $fs-4, $fw-bold);
+
     @media (min-width: 960px) {
       margin-bottom: 26px;
     }
   }
-  
+
   &__item-link {
     display: block;
-    @include font($fs-2, $lh-caption, $fw-light, $link-color);
+
     text-align: center;
     text-decoration: none;
-    
-    &:hover {
-      
-    }
+
+    @include font($fs-2, $lh-caption, $fw-light, $link-color);
   }
-  
+
   @media (min-width: 960px) {
     padding-bottom: 5px;
   }
- 
 }

@@ -1,25 +1,25 @@
 @mixin font($fs: $fs-base, $lh: $lh-base, $fw: $fw-normal, $color: $color-base) {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: $fw;
   font-size: $fs;
   line-height: $lh;
-  font-weight: $fw;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   color: $color;
 }
 
 @mixin container() {
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
-  
+  padding-right: 20px;
+  padding-left: 20px;
+
   @media (min-width: 700px) {
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
   }
-  
+
   @media (min-width: 960px) {
     max-width: 960px;
-    padding-left: 10px;
     padding-right: 10px;
+    padding-left: 10px;
   }
 }
 

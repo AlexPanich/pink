@@ -1,39 +1,34 @@
 .logo {
-  
   &__link {
-    @include font($fs-1, $lh-caption, $fw-normal, $white );
-    text-decoration: none;
     text-transform: uppercase;
-    
+    text-decoration: none;
+
+    @include font($fs-1, $lh-caption, $fw-normal, $white );
   }
-  
+
   &__img {
-    //display: none;
     width: 74px;
     height: 24px;
-    
+
     @media (min-width: 700px) {
       display: inline-block;
-      vertical-align: bottom;
-      margin-right: 10px;
       width: 145px;
       height: 40px;
+      margin-right: 10px;
+
+      vertical-align: bottom;
     }
-    
+
     @media (min-width: 960px) {
       width: 146px;
     }
   }
-  
+
   &:active {
     opacity: 0.3;
   }
-  
+
   .page-footer &__link {
     color: $blue-2;
-  }
-  
-  .page-footer &__img {
-    
   }
 }

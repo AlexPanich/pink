@@ -4,13 +4,11 @@ $blue-1: #1d2631;
 $blue-2: #283645;
 $blue-3: #485461;
 $pink: #d22856;
-$black: #000;
-$white: #fff;
+$black: #000000;
+$white: #ffffff;
 $gray-1: #f2f2f2;
 $gray-2: #e5e5e5;
 $gray-3: #e9ebec;
-
-
 $hero-bg-color: $blue-1;
 $gray-bg-color: $gray-1;
 $menu-color: rgba($black, 0.3);
@@ -31,14 +29,12 @@ $table-border-color: $gray-2;
 $table-heading-color: $blue-2;
 $social-border-color: $gray-3;
 $social-border-hover-color: $blue-2;
-
 $time-animation-1: 0.2s;
 $time-animation-2: 0.1s;
 
 //typography
 
-$font-open-sans: 'Open Sans', Helvetica, Arial, sans-serif;
-
+$font-open-sans: "Open Sans", Helvetica, Arial, sans-serif;
 $fs-base: 14px;
 $lh-base: ($fs-base * 1.7142857);
 $lh-caption: 28px;
@@ -48,7 +44,6 @@ $fw-light: 300;
 $fw-normal: 400;
 $fw-semibold: 600;
 $fw-bold: 700;
-
 $fs-1: round($fs-base * 2.286); //32
 $fs-2: round($fs-base * 1.714); //24
 $fs-3: round($fs-base * 1.5);   //21

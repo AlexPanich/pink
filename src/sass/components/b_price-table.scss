@@ -2,148 +2,153 @@
   width: 262.5%;
   margin-top: 0;
   margin-bottom: 0;
-  text-transform: uppercase;
+
   border-collapse: collapse;
+  text-transform: uppercase;
+
   transition: transform 0.3s;
-  
-  &__row {
-    
-  }
-  
-  
+
   &__heading,
   &__cell {
     position: relative;
+
     border: 2px solid $table-border-color;
   }
-  
+
   &__heading {
     padding: 15px;
+
     background-color: $table-heading-color;
     border-bottom: none;
-    
+
     &.hidden {
       display: none;
     }
-    
-    
   }
-  
+
   &__flag {
     position: absolute;
+    top: 0;
     left: -2px;
-    top: 0px;
+    z-index: 10;
+
     width: 74px;
     height: 74px;
-    z-index: 10;
+
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     &--hit {
-      background-image: url('../img/table-flag-hit.png');
+      background-image: url("../img/table-flag-hit.png");
     }
-    
+
     @media (min-width: 700px) {
       width: 60px;
       height: 60px;
     }
-    
+
     @media (min-width: 960px) {
       width: 74px;
       height: 74px;
     }
   }
-  
+
   &__name,
   &__value {
     display: block;
   }
-  
+
   &__name {
     margin-bottom: 3px;
+
     @include font($fs-4, 30px, $fw-bold, $white);
-    
+
     @media (min-width: 700px) {
-      @include font(16px, 30px, $fw-bold, $white);
       margin-bottom: 0;
+
+      @include font(16px, 30px, $fw-bold, $white);
     }
-    
+
     @media (min-width: 960px) {
-      @include font($fs-4, 30px, $fw-bold, $white);
       margin-bottom: 2px;
+
+      @include font($fs-4, 30px, $fw-bold, $white);
     }
   }
-  
+
   &__value {
     @include font($fs-2, 30px, $fw-light, $white);
-    
+
     @media (min-width: 700px) {
       @include font(18px, 30px, $fw-light, $white);
     }
-    
+
     @media (min-width: 960px) {
       @include font($fs-2, 30px, $fw-light, $white);
     }
   }
-  
+
   &__cell {
     padding: 15px 25px;
+
     background-color: $white;
-    
+
     &:first-child {
       display: none;
     }
-    
+
     @media (min-width: 700px) {
       padding: 7px 15px;
     }
-    
+
     @media (min-width: 960px) {
       padding: 14px 25px;
     }
   }
-  
-  &__body &__row:first-child &__cell:not(:first-child){
+
+  &__body &__row:first-child &__cell:not(:first-child) {
     border-top: none;
   }
-  
+
   &__body &__cell:not(:first-child) {
     &::before {
       content: attr(data-content);
+
       @include font($fs-5, 30px, $fw-light, $black);
     }
   }
- 
+
   @media (min-width: 700px) {
     width: 100%;
-    
+
     &__cell:first-child {
       display: table-cell;
-      @include font($fs-5, 30px, $fw-normal);
+
       text-transform: capitalize;
+
+      @include font($fs-5, 30px, $fw-normal);
     }
-    
+
     &__body &__cell:not(:first-child)::before {
       content: none;
     }
-    
+
     &__heading {
+      padding: 10px;
       &.hidden {
         display: block;
+
         visibility: hidden;
       }
-      
-      padding: 10px;
     }
-  } 
-  
+  }
+
   @media (min-width: 960px) {
-    
     &__heading {
       padding-top: 16px;
       padding-bottom: 20px;
     }
-    
+
     &__cell:first-child {
       @include font($fs-4, 30px, $fw-normal);
     }

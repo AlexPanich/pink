@@ -1,42 +1,31 @@
 .copyright {
   @include font($lh: 50px);
-  
+
   &__link {
     display: inline-block;
-    vertical-align: middle;
     width: 27px;
     height: 33px;
+    margin: 0 10px;
+
+    vertical-align: middle;
+
     background-repeat: no-repeat;
     background-position: center center;
-    margin: 0 10px;
-    
-    &--glukhanko {
-      background-image: url("../img/sprite-copyright-glukhanko.png");
-      
+
+    &--glukhanko, &--htmlacademy {
+      fill: $link-color;
+
       &:hover {
-        background-image: url("../img/sprite-copyright-glukhanko-hover.png");
-      }
-      
-    }
-    
-    &--htmlacademy {
-      background-image: url("../img/sprite-copyright-htmlacademy.png");
-      
-      &:hover {
-        background-image: url("../img/sprite-copyright-htmlacademy-hover.png");
+        fill: $link-color-hover;
       }
     }
-    
+
     &:active {
       opacity: 0.3;
     }
-    
-   
   }
-  
+
   @media (min-width: 960px) {
     @include font($fs-4, 50px);
   }
-  
-  
 }

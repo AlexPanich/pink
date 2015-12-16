@@ -1,17 +1,21 @@
 .price {
   position: relative;
-  background-color: $gray-bg-color;
+
   padding-top: 90px;
   padding-bottom: 90px;
-  
+
+  background-color: $gray-bg-color;
+
   &::before {
+    content: "";
     position: absolute;
     top: 0;
-    content: "";
-    height: 10vw;
+
     width: 100%;
+    height: 10vw;
+
     background: linear-gradient(to right bottom, $white 50%, $gray-bg-color 50%);
-    
+
     @media (min-width: 700px) {
       height: 8vw;
     }
@@ -20,44 +24,47 @@
   &__toggle {
     display: none;
   }
-  
+
   &__controls {
     position: absolute;
+    right: 0;
     bottom: 45px;
     left: 0;
-    right: 0;
-    margin: 0 auto;
     z-index: 10;
+
     display: flex;
     justify-content: center;
-    
+    margin: 0 auto;
+
     @media (min-width: 700px) {
       display: none;
     }
   }
-  
+
   &__control {
     width: 6px;
     height: 6px;
+    margin: 0 10px;
+
     background-color: $dot-color;
     border-radius: 50%;
-    margin: 0 10px;
     cursor: pointer;
+
     transition: background-color $time-animation-2, box-shadow $time-animation-2;
-         
+
     &:hover {
       background-color: $dot-color-hover;
     }
-    
+
     &:active {
       background-color: $dot-color-down;
     }
   }
-  
+
   &__table-wrap {
     overflow: hidden;
   }
-  
+
   &__toggle[id="price-1"]:checked ~ &__controls &__control[for="price-1"],
   &__toggle[id="price-2"]:checked ~ &__controls &__control[for="price-2"],
   &__toggle[id="price-3"]:checked ~ &__controls &__control[for="price-3"] {
@@ -69,35 +76,34 @@
       background-color: transparent;
     }
   }
-  
-  
+
+
   &__toggle[id="price-1"]:checked ~ &__table-wrap .price-table {
     transform: translateX(20px);
   }
-  
+
   &__toggle[id="price-2"]:checked ~ &__table-wrap .price-table {
     transform: translateX(-31%);
   }
-  
+
   &__toggle[id="price-3"]:checked ~ &__table-wrap .price-table {
     transform: translateX(-64%);
   }
-  
+
   @media (min-width: 700px) {
     padding-bottom: 67px;
-    
+
     & .price-table {
       transform: none !important;
     }
-    
+
     &__table-wrap {
       @include container();
     }
   }
-  
+
   @media (min-width: 960px) {
     padding-top: 156px;
     padding-bottom: 97px;
   }
-  
 }

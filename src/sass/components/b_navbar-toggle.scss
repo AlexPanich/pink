@@ -1,94 +1,97 @@
 .navbar-toggle {
   position: absolute;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  width: 90px;
-  height: 100%;
   top: 0;
   right: 0;
-  
+
+  width: 90px;
+  height: 100%;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
   &__lines {
     position: absolute;
-    background-color: $white;
-    left: 20px;
     right: 20px;
+    left: 20px;
+
     height: 4px;
+
+    background-color: $white;
+
     transition: left $time-animation-1, right $time-animation-1, background-color $time-animation-1, transform $time-animation-1;
-    
+
     &::after,
     &::before {
       content: "";
       position: absolute;
-      background-color: $white;
-      left: 0;
       right: 0;
+      left: 0;
+
       height: 4px;
+
+      background-color: $white;
+
       transition: left 0.3s, right $time-animation-1, background-color $time-animation-1, transform $time-animation-1, top $time-animation-1;
     }
-    
+
     &::after {
       top: -10px;
+
       transform-origin: right bottom;
     }
-    
+
     &::before {
       top: 10px;
+
       transform-origin: right top;
     }
-    
+
     &--close {
-      left: 30px;
       right: 30px;
+      left: 30px;
+
       background-color: transparent;
+
       transition: left 0.3s;
-      
-      &::before, &::arger {
-      }
-      
+
       &::before {
         top: 12px;
+
         transform: rotate(45deg);
       }
-      
+
       &::after {
         top: -11px;
+
         transform: rotate(-45deg);
       }
-      
-     
     }
-     
   }
-  
+
   @media (min-width: 700px) {
     width: 110px;
-    
+
     &__lines {
       right: 40px;
-      
+
       &--close {
         right: 50px;
       }
     }
-    
-    
   }
-  
+
   @media (min-width: 960px) {
     display: none;
   }
-  
+
   &:hover &__lines,
   &:hover &__lines::before,
   &:hover &__lines::after {
     background-color: $pink;
   }
-  
+
   &:hover &__lines--close {
     background-color: transparent;
   }
-  
-  
- 
 }
