@@ -9,4 +9,5 @@ css/*.css
 .sass-cache
 build
 src/css
+.editorconfig
 
