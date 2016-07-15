@@ -3,7 +3,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    cmq = require('gulp-combine-media-queries'),
+    cmq = require('gulp-combine-mq'),
     csscomb = require('gulp-csscomb'),
     imagemin = require('gulp-imagemin'),
     copy  = require('gulp-copy'),
@@ -92,7 +92,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('css', function() {
-  return gulp.src('src/sass/**/*')
+  return gulp.src('src/sass/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('src/css'))
         .pipe(reload({stream:true}));
